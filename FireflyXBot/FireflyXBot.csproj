@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Configurations>Release;Debug</Configurations>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType></DebugType>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Konata.Core" />
+    <None Remove="Function\" />
+    <None Remove="Utils\" />
+    <None Remove="Fody" />
+    <None Remove="Costura.Fody" />
+    <None Remove="Data\" />
+    <None Remove="Entity\" />
+    <None Remove="Task\" />
+    <None Remove="NCrontab.Signed" />
+    <None Remove="Coravel" />
+    <None Remove="Cron" />
+    <None Remove="System.Drawing.Common" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Konata.Core" Version="1.3.1" />
+    <PackageReference Include="Cron" Version="1.0.3" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Function\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Data\" />
+    <Folder Include="Entity\" />
+    <Folder Include="Task\" />
+  </ItemGroup>
+</Project>
